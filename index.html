@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glassy</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  </head>
+  <body>
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    <div class="wrapper">
+      <header class="header">
+      	<div class="header__wrapper header__wrapper-index">
+      		<div class="header-top">
+      			<div class="header-top-left">
+      				<div class="header__logo header__logo-catalog">
+      					<a href="index.html"><img src="images/logo/Logo.png" alt=""></a>
+      				</div>
+      				<div class="header__nav">
+      					<nav class="header__menu menu">
+      						<div class="menu__icon icon-menu">
+      				               <span></span>
+      				               <span></span>
+      				               <span></span>
+      				              </div>
+      				            <div class="header-menu"></div>
+      						<ul class="header__nav-list">
+      							<li class="header__nav-item"><a href="#" class="header__nav-link">Каталог</a>
+      								<ul class="header__nav-links">
+      									<li class="header__nav-lt">Новинки</li>
+      									<li class="header__nav-w"><a href="catalog.html" class="header__nav-sublink">Сливочное</a></li>
+      									<li class="header__nav-w"><a href="#" class="header__nav-sublink">Щербеты</a></li>
+      									<li class="header__nav-w"><a href="#" class="header__nav-sublink">Фруктовый лед</a></li>
+      									<li class="header__nav-w"><a href="#" class="header__nav-sublink">Мелорин</a></li>
+      								</ul>
+      							</li>
+      							<li class="header__nav-item"><a href="#" class="header__nav-link">Доставка и оплата</a></li>
+      							<li class="header__nav-item"><a href="#" class="header__nav-link">О Компании</a></li>
+      						</ul>
+      					</nav>
+      				</div>
+      			</div>
+      			<div class="buy">
+      				<div class="header__bascket">
+      					<div class="header__bascket-img">
+      						<a href="#" class="header__buscket-link header__buscket-link1">
+      							<svg class="buscket-icon">
+      								<use xlink:href="images/icon/sprite.svg#search"></use>
+      							</svg>
+      						</a>
+      						<a href="#" class="header__buscket-link header__buscket-link2">
+      							<svg class="buscket-icon">
+      								<use xlink:href="images/icon/sprite.svg#exit"></use>
+      							</svg>
+      							<div class="buscket-link__text">Вход</div>
+      						</a>
+      						<a href="#" class="header__buscket-link header__buscket-link2">
+      							<svg class="buscket-icon">
+      								<use xlink:href="images/icon/sprite.svg#buy"></use>
+      							</svg>
+      							<div class="buscket-link__text">Пусто</div>
+      						</a>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="header-bottom">
+      			<p class="header-bottom__time">С 10 до 20, ежедневно</p>
+      			<a href="tel:+78124502525" class="header-bottom__tel">8 812 450-25-25</a>
+      			<a href="tel:+78124502525" class="header-bottom__hidden">
+      				<svg class="buscket-icon">
+      					<use xlink:href="images/icon/sprite.svg#phone"></use>
+      				</svg>
+      			</a>
+      		</div>
+      	</div>
+      </header>
+      <main>
+<!--       Блок main-screen НАЧАЛО -->
+        <section class="main-screen">
+          <div class="container">
+            <div class="slider">
+              <div class="slider-controls">
+                <label for="product-1">Первый</label>
+                <label for="product-2">Второй</label>
+                <label for="product-3">Третий</label>
+              </div>
+              <ul class="slider-list">
+                <li class="slider-item slide" id="slide1">
+                  <h3 class="slide-title">
+                    Крем-брюле и пломбир с малиновым джемом
+                  </h3>
+                  <a class="button slide-button" href="#">Давайте оба!</a>
+                </li>
+                <li class="slider-item slide" id="slide2">
+                  <h3 class="slide-title">
+                    Шоколадный пломбир и лимонный сорбет
+                  </h3>
+                  <a class="button slide-button" href="#">Давайте оба!</a>
+                </li>
+                <li class="slider-item slide" id="slide3">
+                  <h3 class="slide-title">
+                    Пломбир с помадкой и клубничный щербет
+                  </h3>
+                  <a class="button slide-button" href="#">Давайте оба!</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+<!--       Блок main-screen КОНЕЦ -->
+
+
+<!--       Блок Banners НАЧАЛО -->
+        <section class="banners">
+          <div class="container">
+            <div class="banners__content">
+              <div class="banners__item banners__item-first">
+                <div class="banners__item-body">
+                  <p class="item-body-title">Малинка даром!</p>
+                  <p class="item-body-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                </div>
+                <div class="banners__item-button">
+                  <a class="button button-small slide-button" href="#">Хочу варенье!</a>
+                </div>
+              </div>
+              <div class="banners__item banners__item-second">
+                <div class="banners__item-body">
+                  <p class="item-body-title">Шоколадки даром!</p>
+                  <p class="item-body-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                </div>
+                <div class="banners__item-button">
+                  <a class="button button-small slide-button" href="#">Хочу шоколадки!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+<!--       Блок Banners КОНЕЦ -->
+
+
+<!--       Блок Cards НАЧАЛО -->
+        <section class="cards">
+          <div class="container">
+            <div class="cards__content">
+              <div class="cards__content-item">
+                <div class="content-item__img"><img src="images/index/1.png" alt=""></div>
+                <div class="content-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой </div>
+                <div class="content-item-price">310 ₽<span>/кг</span></div>
+                <div class="content-item-hit"><img src="images/icon/hit.png" alt=""></div>
+              </div>
+              <div class="cards__content-item">
+                <div class="content-item__img"><img src="images/index/2.png" alt=""></div>
+                <div class="content-item-text">Сливочно-кофейное с кусочками шоколада</div>
+                <div class="content-item-price">380 ₽<span>/кг</span></div>
+                <div class="content-item-hit"><img src="images/icon/hit.png" alt=""></div>
+              </div>
+              <div class="cards__content-item">
+                <div class="content-item__img"><img src="images/index/3.png" alt=""></div>
+                <div class="content-item-text">Сливочно-клубничное с присыпкой из белого шоколада</div>
+                <div class="content-item-price">355 ₽<span>/кг</span></div>
+                <div class="content-item-hit"><img src="images/icon/hit.png" alt=""></div>
+              </div>
+              <div class="cards__content-item">
+                <div class="content-item__img"><img src="images/index/4.png" alt=""></div>
+                <div class="content-item-text">Сливочное крем-брюле с карамельной подливкой</div>
+                <div class="content-item-price">415 ₽<span>/кг</span></div>
+                <div class="content-item-hit"><img src="images/icon/hit.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </section>
+<!--       Блок Cards КОНЕЦ -->
+
+
+<!--       Блок desk НАЧАЛО -->
+        <section class="desk">
+          <div class="container">
+           <div class="desk__content">
+              <div class="desk__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</div>
+              <div class="desk__cards">
+                <div class="desk__cards-item cards-item-1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                </div>
+                <div class="desk__cards-item cards-item-2">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество. 
+                </div>
+                <div class="desk__cards-item cards-item-3">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+                </div>
+                <div class="desk__cards-item cards-item-4">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+                </div>
+              </div>
+           </div>
+          </div>
+
+        </section>
+<!--       Блок desk КОНЕЦ -->
+
+
+<!--       Блок news НАЧАЛО -->
+        <section class="news">
+          <div class="container">
+            <div class="news__content">
+              <div class="news__cards">
+                <div class="news__item news__item-1">
+                  <div class="desk__content-item--111">
+                    <p class="news__item-title">Новое в нашем блоге</p>
+                    <div class="news__item-link">10 способов сервировки фруктовых щербетов к столу</div>
+                  </div>
+                </div>
+                <div class="news__item news__item-2">
+                  <div class="news__item-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</div>
+                  <div class="news__item-form">
+                    <form action="">
+                      <input type="text" name="email" id="email" placeholder="Электронная почта">
+                      <button class="button button-small">Отправить</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+<!--       Блок news КОНЕЦ -->
+
+
+<!--       Блок map НАЧАЛО -->
+        <section class="contacts">
+          <div class="container">
+            <div class="contacts__body">
+              <div class="contacts__body-content">
+                <p class="body-content__text">Адрес главного офиса<br> и офлайн-магазина:</p>
+                <p class="body-content__subtext">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+                <p class="body-content__text">Для заказов по телефону:</p>
+                <p class="body-content__subtext">8 812 450-25-25</p>
+                <p class="body-content__text">(с 10 до 20 ежедневно)</p>
+                <button class="button button-small">Форма обратной связи</button>
+              </div>
+            </div>
+          </div>
+          <div id="map" class="map"></div>
+        </section>
+<!--       Блок map КОНЕЦ -->
+
+      </main>
+
+
+      <footer class="footer">
+      	<div class="container">
+      		<div class="footer__content">
+      			<div class="footer__body">
+      				<div class="footer__social">
+      					<a href="#" class="social__link">
+      						<svg class="buscket-icon">
+      							<use xlink:href="images/icon/sprite.svg#tw"></use>
+      						</svg>
+      					</a>
+      					<a href="#" class="social__link">
+      						<svg class="buscket-icon">
+      							<use xlink:href="images/icon/sprite.svg#instagram"></use>
+      						</svg>					
+      					</a>
+      					<a href="#" class="social__link">
+      						<svg class="buscket-icon">
+      							<use xlink:href="images/icon/sprite.svg#fb"></use>
+      						</svg>					
+      					</a>
+      				</div>
+      				<div class="footer__body-links">
+      					<div class="body-links__left">
+      						<div class="links__left-producers"><a href="" class="body-links">Для поставщиков</a></div>
+      						<div class="links__left-about"><a href="" class="body-links">О производстве</a></div>
+      					</div>
+      					<div class="body-links__right">
+      						<div class="links__right-documents"><a href="#" class="body-links">Наши документы</a></div>
+      						<div class="links__right-standards"><a href="#" class="body-links">Экологические стандарты</a></div>
+      					</div>
+      				</div>
+      			</div>
+      			<div class="footer__body__licence">
+      				<div class="body__licence-img"><img src="images/logo/footer-logo.png" alt=""></div>
+      				<div class="body__licence-text">Сделано в HTML Academy © 2019</div>
+      			</div>
+      		</div>
+      	</div>
+      </footer>
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/baguetteBox.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--end script-->
+  </body>
+</html>

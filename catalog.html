@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glassy</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  </head>
+  <body>
+    <div class="wrapper wrapper__catalog">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="header-top">
+            <div class="header-top-left">
+              <div class="header__logo">
+                <a href="index.html"><img src="images/logo/Logo.png" alt=""></a>
+              </div>
+              <div class="header__nav">
+                <nav class="header__menu menu">
+                  <div class="menu__icon icon-menu">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                    </div>
+                  <div class="header-menu"></div>
+                  <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#" class="header__nav-link active">Каталог</a>
+                      <ul class="header__nav-links">
+                        <li class="header__nav-lt">Новинки</li>
+                        <li class="header__nav-w"><a href="#" class="header__nav-sublink">Сливочное</a></li>
+                        <li class="header__nav-w"><a href="#" class="header__nav-sublink">Щербеты</a></li>
+                        <li class="header__nav-w"><a href="#" class="header__nav-sublink">Фруктовый лед</a></li>
+                        <li class="header__nav-w"><a href="#" class="header__nav-sublink">Мелорин</a></li>
+                      </ul>
+                    </li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Доставка и оплата</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">О Компании</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="buy">
+              <div class="header__bascket">
+                <div class="header__bascket-img">
+                  <a href="#" class="header__buscket-link header__buscket-link1">
+                    <svg class="buscket-icon">
+                      <use xlink:href="images/icon/sprite.svg#search"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="header__buscket-link header__buscket-link2">
+                    <svg class="buscket-icon">
+                      <use xlink:href="images/icon/sprite.svg#exit"></use>
+                    </svg>
+                    <div class="buscket-link__text">Вход</div>
+                  </a>
+                  <a href="#" class="header__buscket-link header__buscket-link2">
+                    <svg class="buscket-icon">
+                      <use xlink:href="images/icon/sprite.svg#buy"></use>
+                    </svg>
+                    <div class="buscket-link__text">Пусто</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom-content">
+            <div class="bread-crumbs">
+              <div class="container">
+                <div class="bread">
+                  <ul class="bread__crumbs-list">
+                    <li class="bread__crumbs-item">
+                      <a href="index.html" class="bread__crumbs-link bread__crumbs-1">Главная</a>   
+                      <svg class="arr-icon">
+                        <use xlink:href="images/icon/sprite.svg#arr"></use>
+                      </svg>
+                    </li>
+                    <li class="bread__crumbs-item">
+                      <a href="#" class="bread__crumbs-link">Каталог</a>
+                      <svg class="arr-icon">
+                        <use xlink:href="images/icon/sprite.svg#arr"></use>
+                      </svg>
+                    </li>
+                    <li class="bread__crumbs-item"><a href="#" class="bread__crumbs-link bread__crumbs-3">Сливочное</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header-bottom">
+              <p class="header-bottom__time">С 10 до 20, ежедневно</p>
+              <a href="tel:+78124502525" class="header-bottom__tel">8 812 450-25-25</a>
+              <a href="tel:+78124502525" class="header-bottom__hidden bottom__hidden-catalog">
+                <svg class="buscket-icon">
+                  <use xlink:href="images/icon/sprite.svg#phone"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+
+<!--         sort-block НАЧАЛО -->
+      <section class="sort-block">
+        <div class="container">
+          <div class="sort-block__content">
+            <div class="sort-block__title">Сливочное мороженое</div>
+            <div class="sort-block__body">
+              <form class="sort-block__form">
+                <div class="sort-block__top">
+                  <div class="block__top-sort">
+                    <div class="block__top sort-title">Сортировка:</div>
+                    <select>
+                      <option class="opt-title">по популярности</option>
+                      <option>по цене</option>
+                      <option>по рейтингу</option>
+                    </select>
+                  </div>
+                  <div class="block__top-range">
+                    <div class="block__top sort-title">Цена: 
+                      <input type="text" id="amount">руб.
+                      <div class="line"></div>
+                      <input type="text" id="amount_1"> руб.
+                    </div>
+                    <div class="slider__range-block">
+                      <div id="slider-range"></div>
+                    </div>
+                  </div>
+                  <div class="block__top-radio">
+                    <div class="block__top sort-title">Жирность:</div>
+                    <div class="radio__body">
+                      <ul class="radio__body-list">
+                        <li>
+                          <input type="radio" name="radio1" id="radio1">
+                          <label for="radio1" >0%</label>
+                        </li>
+                        <li>
+                          <input type="radio" name="radio1" id="radio2" checked>
+                          <label for="radio2" >до 10%</label>
+                        </li>
+                        <li>
+                          <input type="radio" name="radio1" id="radio3">
+                          <label for="radio3" >до 30%</label>
+                        </li>
+                        <li>
+                          <input type="radio" name="radio1" id="radio4">
+                          <label for="radio4" >выше 30%</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="sort-block__bottom">
+                  <div class="block__bottom sort-title">Наполнители:</div>
+                  <div class="check__checkbox">
+                    <ul class="check__checkbox-list">
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox1" checked>
+                        <label for="check__checkbox1" >шоколадные</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox2" checked>
+                        <label for="check__checkbox2" >сахарные присыпки</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox3">
+                        <label for="check__checkbox3" >фрукты</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox4">
+                        <label for="check__checkbox4" >сиропы</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox5">
+                        <label for="check__checkbox5">джемы</label>
+                      </li>
+                    </ul>
+                    <div class="form__button button button-tr">Применить</div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+<!--         sort-block КОНЕЦ -->
+
+       <!--    cards-block НАЧАЛО -->
+      <section class="cards">
+        <div class="container">
+          <div class="cards-block__content">
+            <div class="cards__content content__cards" id="loop">
+              <div class="cards__content-item list-group" data-price="9900" data-type="1" data-char="1">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/1.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой </div>
+                  <div class="content-item-price">310 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group" data-price="900" data-type="2" data-char="3">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/2.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-кофейное с кусочками шоколада</div>
+                  <div class="content-item-price">380 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group" data-price="99900" data-type="3" data-char="2">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/3.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-клубничное с присыпкой из белого шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/4.png" alt=""></div>
+                  <div class="content-item-text">Сливочное крем-брюле с карамельной подливкой</div>
+                  <div class="content-item-price">415 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/5.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с брусничным джемом </div>
+                  <div class="content-item-price">325 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/6.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-черничное с цельными ягодами черники</div>
+                  <div class="content-item-price">410 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/7.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-лимонное с карамельной присыпкой</div>
+                  <div class="content-item-price">375 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/8.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с шоколадной стружкой</div>
+                  <div class="content-item-price">320 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/9.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-ванильное с кусочками шоколада</div>
+                  <div class="content-item-price">440 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/10.png" alt=""></div>
+                  <div class="content-item-text">Сливочноe с ментоловым сиропом</div>
+                  <div class="content-item-price">435 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/11.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с кусочками черного шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/12.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с мятным сиропом</div>
+                  <div class="content-item-price">420 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/12.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой </div>
+                  <div class="content-item-price">310 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/11.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-кофейное с кусочками шоколада</div>
+                  <div class="content-item-price">380 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/10.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-клубничное с присыпкой из белого шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/9.png" alt=""></div>
+                  <div class="content-item-text">Сливочное крем-брюле с карамельной подливкой</div>
+                  <div class="content-item-price">415 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/8.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с брусничным джемом </div>
+                  <div class="content-item-price">325 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/7.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-черничное с цельными ягодами черники</div>
+                  <div class="content-item-price">410 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/6.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-лимонное с карамельной присыпкой</div>
+                  <div class="content-item-price">375 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/5.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с шоколадной стружкой</div>
+                  <div class="content-item-price">320 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/4.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-ванильное с кусочками шоколада</div>
+                  <div class="content-item-price">440 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/3.png" alt=""></div>
+                  <div class="content-item-text">Сливочноe с ментоловым сиропом</div>
+                  <div class="content-item-price">435 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/2.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с кусочками черного шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/1.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с мятным сиропом</div>
+                  <div class="content-item-price">420 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/1.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой </div>
+                  <div class="content-item-price">310 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/2.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-кофейное с кусочками шоколада</div>
+                  <div class="content-item-price">380 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/3.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-клубничное с присыпкой из белого шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/4.png" alt=""></div>
+                  <div class="content-item-text">Сливочное крем-брюле с карамельной подливкой</div>
+                  <div class="content-item-price">415 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/5.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с брусничным джемом </div>
+                  <div class="content-item-price">325 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/6.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-черничное с цельными ягодами черники</div>
+                  <div class="content-item-price">410 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/7.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-лимонное с карамельной присыпкой</div>
+                  <div class="content-item-price">375 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/8.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с шоколадной стружкой</div>
+                  <div class="content-item-price">320 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/9.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-ванильное с кусочками шоколада</div>
+                  <div class="content-item-price">440 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/10.png" alt=""></div>
+                  <div class="content-item-text">Сливочноe с ментоловым сиропом</div>
+                  <div class="content-item-price">435 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/11.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с кусочками черного шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/12.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с мятным сиропом</div>
+                  <div class="content-item-price">420 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/1.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой </div>
+                  <div class="content-item-price">310 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/2.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-кофейное с кусочками шоколада</div>
+                  <div class="content-item-price">380 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/3.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-клубничное с присыпкой из белого шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/4.png" alt=""></div>
+                  <div class="content-item-text">Сливочное крем-брюле с карамельной подливкой</div>
+                  <div class="content-item-price">415 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/5.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с брусничным джемом </div>
+                  <div class="content-item-price">325 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/6.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-черничное с цельными ягодами черники</div>
+                  <div class="content-item-price">410 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/7.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-лимонное с карамельной присыпкой</div>
+                  <div class="content-item-price">375 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/8.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с шоколадной стружкой</div>
+                  <div class="content-item-price">320 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/9.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-ванильное с кусочками шоколада</div>
+                  <div class="content-item-price">440 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/10.png" alt=""></div>
+                  <div class="content-item-text">Сливочноe с ментоловым сиропом</div>
+                  <div class="content-item-price">435 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/11.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с кусочками черного шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/12.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с мятным сиропом</div>
+                  <div class="content-item-price">420 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/1.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой </div>
+                  <div class="content-item-price">310 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/2.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-кофейное с кусочками шоколада</div>
+                  <div class="content-item-price">380 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/3.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-клубничное с присыпкой из белого шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/4.png" alt=""></div>
+                  <div class="content-item-text">Сливочное крем-брюле с карамельной подливкой</div>
+                  <div class="content-item-price">415 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/5.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с брусничным джемом </div>
+                  <div class="content-item-price">325 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/6.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-черничное с цельными ягодами черники</div>
+                  <div class="content-item-price">410 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/7.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-лимонное с карамельной присыпкой</div>
+                  <div class="content-item-price">375 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/8.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с шоколадной стружкой</div>
+                  <div class="content-item-price">320 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/9.png" alt=""></div>
+                  <div class="content-item-text">Сливочно-ванильное с кусочками шоколада</div>
+                  <div class="content-item-price">440 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/10.png" alt=""></div>
+                  <div class="content-item-text">Сливочноe с ментоловым сиропом</div>
+                  <div class="content-item-price">435 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/11.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с кусочками черного шоколада</div>
+                  <div class="content-item-price">355 ₽<span>/кг</span></div>
+                </a>
+              </div>
+              <div class="cards__content-item list-group">
+                <a href="javascript:void(0)" class="list-group-item active">
+                  <div class="content-item__img"><img src="images/index/12.png" alt=""></div>
+                  <div class="content-item-text">Сливочное с мятным сиропом</div>
+                  <div class="content-item-price">420 ₽<span>/кг</span></div>
+                </a>
+              </div>
+            </div>
+            <div aria-label="Page navigation" class="pagination-block">
+              <ul class="pagination">
+                <li>
+                  <a id="prev-page" href="javascript:void(0)" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </div> 
+          </div>
+        </div>
+      </section>
+   <!--        cards-block КОНЕЦ -->
+      </main>
+
+
+      <footer class="footer">
+      	<div class="container">
+      		<div class="footer__content">
+      			<div class="footer__body">
+      				<div class="footer__social">
+      					<a href="#" class="social__link">
+      						<svg class="buscket-icon">
+      							<use xlink:href="images/icon/sprite.svg#tw"></use>
+      						</svg>
+      					</a>
+      					<a href="#" class="social__link">
+      						<svg class="buscket-icon">
+      							<use xlink:href="images/icon/sprite.svg#instagram"></use>
+      						</svg>					
+      					</a>
+      					<a href="#" class="social__link">
+      						<svg class="buscket-icon">
+      							<use xlink:href="images/icon/sprite.svg#fb"></use>
+      						</svg>					
+      					</a>
+      				</div>
+      				<div class="footer__body-links">
+      					<div class="body-links__left">
+      						<div class="links__left-producers"><a href="" class="body-links">Для поставщиков</a></div>
+      						<div class="links__left-about"><a href="" class="body-links">О производстве</a></div>
+      					</div>
+      					<div class="body-links__right">
+      						<div class="links__right-documents"><a href="#" class="body-links">Наши документы</a></div>
+      						<div class="links__right-standards"><a href="#" class="body-links">Экологические стандарты</a></div>
+      					</div>
+      				</div>
+      			</div>
+      			<div class="footer__body__licence">
+      				<div class="body__licence-img"><img src="images/logo/footer-logo.png" alt=""></div>
+      				<div class="body__licence-text">Сделано в HTML Academy © 2019</div>
+      			</div>
+      		</div>
+      	</div>
+      </footer>
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/baguetteBox.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
+    <!--end script-->
+  </body>
+</html>

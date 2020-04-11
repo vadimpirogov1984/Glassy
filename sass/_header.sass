@@ -1,0 +1,348 @@
+
+
+//======================================================
+.header
+	padding: 10px 0 0
+	@media screen and (max-width: $md3)
+		position: fixed
+		z-index: 50
+		width: 100%
+		background-color: rgba(0%, 0%, 0%, 0.5)
+		
+	&__wrapper
+		max-width: 1140px
+		margin: 0 auto
+		margin-top: 20px
+		display: flex
+		flex-direction: column 
+		padding: 0 15px
+		@media screen and (max-width: $md3)
+			flex-direction: column
+			justify-content: space-between
+			margin: 10px 0 auto
+		&-index 
+			flex-direction: row 
+	&__logo
+		margin: 0 24px 0 0
+		cursor: pointer
+		z-index: 50
+		transition: $an
+		&:hover
+			opacity: 0.3
+		@media screen and (max-width: 818px)
+			margin: 0
+		@media screen and (max-width: $md3)
+			margin: 0 0 0 70px
+		&-catalog 
+
+	&__nav
+
+	&__nav-list
+		display: flex
+		justify-content: space-between
+
+		@media screen and (max-width: $md3)
+			display: block
+			margin: 30px 0 0 0
+		li 
+			position: relative
+			
+	&__nav-item
+		position: relative
+		padding: 15px 0
+		&:hover
+			.header__nav-links
+				display: block
+				top: 50px
+
+		// &:active
+		// 	background-color: #f6b5a5
+				
+	&__nav-lt 
+		position: relative
+		color: #323232
+		font-family: Roboto
+		font-size: 14px
+		font-weight: 700
+		line-height: 16px
+		padding: 13px 20px 14px
+		margin: 0 0 7px
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			bottom: 0
+			left: 8px
+			height: 1px
+			width: 128px
+			background-color: #d1d0ce
+	&__nav-w
+		padding: 7px 0
+		position: relative
+		
+		&:hover 
+			background-color: #fbded8
+		&:active
+			background-color: #f6b5a5
+
+		&:last-child
+			padding: 0 0 14px
+	&__nav-link
+		padding: 7px 14px
+		border-radius: 20px
+		color: #ffffff
+		font-family: Roboto
+		font-size: 16px
+		font-weight: 700
+		line-height: 18px
+		transition: 
+		&:hover
+			color: #323232
+			background-color: #f7f6f3
+		@media screen and (max-width: 818px)
+			font-size: 14px
+	&__nav-sublink
+		color: #323232
+		font-family: Roboto
+		font-size: 14px
+		font-weight: 400
+		line-height: 16px
+		padding: 0 20px
+
+		// display: flex
+		// padding: 0 0 5px
+		// border-bottom: 2px solid transparent
+		// transition: $an
+		// @media screen and (max-width: $md3)
+		// 	padding: 15px 0 0
+		// &:hover
+		// 	color: #fb565a
+		// &:active
+		// 	border-bottom: 2px solid #fb565a
+		// &.active
+		// 	border-bottom: 3px solid #fb565a
+	&__bascket
+		display: flex
+		align-items: center
+		border-bottom: 2px solid transparent
+		@media screen and (max-width: $md3)
+			padding: 15px 0 0
+		&:hover
+			color: #fb565a
+		&:active
+			border-bottom: 2px solid #fb565a
+	&__bascket-img
+		// margin: 0 30px 0 0
+		display: flex
+		@media screen and (max-width: $md3)
+			padding: 0 0 0 14px
+	&__buscket-link
+		display: flex 
+		align-items: center
+		margin: 0 10px 0 0 
+		padding: 6px 16px
+		border-radius: 50px
+		background-color: rgba(255,255,255,0.2)
+		color: #ffffff
+		font-family: Roboto
+		font-size: 14px
+		font-weight: 500
+		line-height: 16px
+		transition: $an 
+		&:last-child
+			margin: 0
+		&:hover
+			color: #323232
+			background-color: #f8f7f4
+			.buscket-icon
+				fill: #000
+	&__buscket-title
+		text-transform: uppercase
+		font-size: 16px
+		line-height: 30px
+		font-weight: 500
+		color: #000
+.buscket-link__text
+	margin: 0 0 0 8px 
+.header__buscket-link1
+	padding: 8px
+	width: 33px
+	height: 33px
+	border-radius: 50%
+.bascket__nav-link
+	text-transform: uppercase
+	font-size: 16px
+	line-height: 30px
+	font-weight: 500
+	color: #000
+	transition: $an
+	&:hover
+		color: #fb565a
+
+.icon-menu
+	@media screen and (max-width: $md3)
+		display: block
+		position: absolute
+		top: 40px
+		left: 15px
+		width: 30px
+		height: 18px
+		cursor: pointer
+		z-index: 5
+		span 
+			top: 8px
+			left: 0
+			position: absolute
+			width: 100%
+			height: 2px
+			background-color: #fff
+			&:first-child
+				top: 0
+			&:last-child
+				top: auto
+				bottom: 0
+		@media screen and (max-width: $md4)
+			top: 38px
+		&.active
+			span
+				background-color: #fff
+				transform: scale(0)
+				&:first-child
+					top: 8px
+					transform: rotate(-45deg)
+				&:last-child 
+					bottom: 8px
+					transform: rotate(45deg)
+.header-menu
+	display: none
+	@media screen and (max-width: $md3)
+		display: block
+		position: fixed
+		width: 100%
+		height: 100%
+		overflow: auto
+		left: -120%
+		top: 0
+		background-color: rgba(132, 157, 143, 0.9)
+		padding: 95px 10px 20px 10px
+		-webkit-transition: all 0.5s
+		transition: all 0.5s 
+	&.active 
+		left: 0
+		z-index: 1	
+.buscket-icon
+	width: 15px
+	height: 15px
+	fill: #fff
+	transition: $an 
+
+
+.header__nav-links
+	display: none 
+	position: absolute
+	overflow: hidden 
+	top: 100%
+	left: -7px
+	width: 144px
+	z-index: 10
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4)
+	background-color: #f8f7f4
+	border-radius: 10px
+	transition: $an 
+
+
+.header-top
+	display: flex 
+	justify-content: space-between 
+	align-items: center
+	&-left 
+		display: flex
+		align-items: center
+
+.header-bottom
+	text-align: right 
+	position: relative
+	
+	&__time
+		margin: 0 0 8px
+		color: #ffffff
+		font-family: Roboto
+		font-size: 14px
+		font-weight: 700
+		line-height: 16px
+		@media screen and (max-width: $md4)
+			display: none
+			
+	&__tel
+		color: #ffffff
+		font-family: Roboto
+		font-size: 22px
+		font-weight: 700
+		line-height: 24px
+		@media screen and (max-width: $md4)
+			display: none
+			
+// .menu ul > li:hover
+
+.header__nav-list > .header__nav-item:hover
+	.header__nav-link
+		background-color: #f7f6f3
+		color: #323232
+		
+.header-bottom__hidden
+	display: none
+	visibility: hidden
+
+	background-color: rgba(255,255,255,0.2)
+	border: 3px solid #ffffff
+	@media screen and (max-width: $md4)
+
+		display: block 
+		visibility: visible
+		padding: 8px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		width: 50px
+		height: 50px
+
+.bottom__hidden-catalog
+	position: absolute
+	top: -91px 
+	left: -51px
+/* bread-crumbs*/
+.header__bottom-content
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+.bread-crumbs
+
+
+.bread
+	margin: 0 0 0 -12px
+	&__crumbs-list
+		display: flex
+		@media screen and (max-width: $md3)
+			padding: 0 0 10px
+	&__crumbs-item
+		font-size: 14px
+		font-weight: 400
+		line-height: 16px
+		display: flex
+		align-items: center
+	&__crumbs-link
+		padding: 0 10px
+		color: #ffffff 
+		font-size: 14px
+		font-weight: 400
+		line-height: 16px
+
+.bread__crumbs-1
+	padding-left: 0
+.bread__crumbs-3
+	padding-right: 0
+.arr-icon
+	fill: #ffffff
+	width: 7px
+	height: 7px

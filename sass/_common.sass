@@ -1,0 +1,547 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap')
+//==================================================
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+html
+	height: 100%
+
+body 
+	height: 100%
+	color: #ffffff
+	font-family: Roboto
+	font-size: 16px
+	font-weight: 500
+	line-height: 22px
+	background-color: #849d8f
+
+ul 
+	padding: 0
+li 
+	list-style: none
+a 
+	text-decoration: none
+// h1
+
+// h2 
+
+// h3 
+	
+// .btn
+// 	display: inline-block
+// 	padding: 0
+// 	height: 50px
+// 	padding: 0 65px
+// 	color: #fff
+// 	line-height: 18px
+// 	text-transform: uppercase
+// 	font-size: 16px
+// 	font-weight: 500
+// 	letter-spacing: 0.67px
+// 	position: relative
+// 	cursor: pointer
+// 	background-color: #fb565a
+// 	border: none
+// 	transition: $an
+// 	&:hover
+// 		// color: #fb565a
+// 		background-color: #e74246
+// 	&:active
+// 		background: #d7373b
+// 		// opacity: 0.7	/* style */
+// 	&-small
+// 		padding: 0 40px
+// 	&-green
+// 		background-color: #00ca74
+// 		&:hover
+// 			background: #00bc6c	/* style */
+// 	&-yellow
+// 		background-color: #efc84a
+// 		&:hover
+// 			background: #eab534
+// 	&-gray
+// 		padding: 0 90px
+// 		color: #000
+// 		font-weight: 500
+// 		background-color: #eeeeee
+// 		&:hover
+// 			background-color: #dfdfdf 
+
+.button 
+	display: inline-block
+	padding: 12px 44px
+
+	font-weight: 600
+	font-size: 31px
+	line-height: 41px
+	text-align: center
+	color: #ffffff
+	vertical-align: top
+	text-decoration: none
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76)
+
+	background: #f26843
+	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%)
+	border-radius: 50px
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64)
+	border: none
+
+	cursor: pointer
+	transition: $an 
+	&-small
+		padding: 15px 22px
+		font-size: 18px
+		font-weight: 700
+		line-height: 24px
+	&-tr 
+		padding: 9px 27px
+		font-size: 16px
+		font-weight: 500
+		line-height: 18px
+		background: rgba(255,255,255, 0.2)
+		box-shadow: none
+		text-shadow: none
+		border: 2px solid #ffffff
+.button:hover 
+	background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%)
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 1)
+
+.button:active 
+	background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%)
+	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1)
+
+.ibg 
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	img 
+		display: none
+
+.container
+	max-width: 1146px
+	margin: 0 auto
+	padding: 0 12px
+
+.wrapper
+	overflow: hidden
+	min-height: 100%
+	position: relative 
+	background-color: #849d8f
+	background-image: url("../images/index/004bg.png")
+	background-repeat: no-repeat
+	background-position: top center 
+	transition: background-image 0.5s ease, background-color 0.5s ease
+	&:before,
+	&:after 
+	  content: ""
+	  visibility: hidden
+
+	&:before 
+		background-image: url("../images/index/005bg.png")
+
+	&:after 
+		background-image: url("../images/index/006bg.png")
+	&__catalog
+		background-image: none 
+
+.active
+	background-color: #d07058
+
+.main-screen
+	padding: 0 0 35px
+	@media screen and (max-width: $md4)
+		padding: 0 0 100px
+.slider 
+	position: relative
+	padding-top: 321px
+	text-align: center
+	color: #ffffff
+	@media screen and (max-width: $md4)
+		padding: 250px 0 0 0
+.slide-title 
+	max-width: 700px
+	margin: 0 auto
+	margin-bottom: 27px
+	font-size: 60px
+	line-height: 60px
+	font-weight: 800
+	@media screen and (max-width: $md3)
+		font-size: 40px
+		line-height: 40px
+	@media screen and (max-width: $md4)
+		margin-bottom: 120px
+		font-size: 28px
+		line-height: 28px
+.slider-controls 
+	position: absolute
+	bottom: 63px
+	left: 0
+	z-index: 20
+	font-size: 0
+	@media screen and (max-width: $md4)
+		left: 42%
+		bottom: 125px
+.slider-controls label 
+	display: inline-block
+	width: 17px
+	height: 17px
+	margin-right: 8px
+	vertical-align: top
+	background-color: transparent
+	border: 2px solid #ffffff
+	border-radius: 50%
+	cursor: pointer
+	@media screen and (max-width: $md4)
+		margin-right: 15px
+		&:last-child
+			margin: 0
+.visually-hidden 
+	position: absolute
+	width: 1px
+	height: 1px
+	clip: rect(0, 0, 0, 0)
+
+.slide 
+	display: none
+#product-1:checked ~ .wrapper #slide1,
+#product-2:checked ~ .wrapper #slide2,
+#product-3:checked ~ .wrapper #slide3
+	display: block 
+#product-1:checked ~ .wrapper label[for="product-1"],
+#product-2:checked ~ .wrapper label[for="product-2"],
+#product-3:checked ~ .wrapper label[for="product-3"] 
+  background-color: #ffffff
+#product-1:checked ~ .wrapper
+	background-color: #849d8f
+	background-image: url("../images/index/004bg.png")
+
+#product-2:checked ~ .wrapper 
+	background-color: #8996a6
+	background-image: url("../images/index/005bg.png")
+
+#product-3:checked ~ .wrapper 
+	background-color: #9d8b84
+	background-image: url("../images/index/006bg.png")
+ 
+
+/*Banners*/
+
+.banners
+
+	&__content
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: $md3)
+			flex-direction: column
+	&__item
+		padding: 25px 20px 20px
+		margin-bottom: 35px
+		border-radius: 20px
+		flex: 0 0 50%
+		min-height: 100%
+		display: flex
+		flex-direction: column
+	&__item-img
+
+	&__item-body
+		margin: 0 0 30px
+		max-width: 515px
+		flex: 1 1 auto
+	&__item-button
+		text-align: right
+
+
+.item-body-title
+	padding: 0 0 20px
+	font-size: 35px
+	font-weight: 700
+	line-height: 41px
+	@media screen and (max-width: $md4)
+		font-size: 30px
+		line-height: 35px
+.item-body-text
+	font-size: 18px
+	font-weight: 700
+	line-height: 22px
+
+.banners__item-first
+	flex: 0 0 49.5%
+	min-height: 100%
+	background: url('../images/index/21.jpg') 0 0 no-repeat 
+	background-size: cover 
+
+.banners__item-second
+	flex: 0 0 49.5%
+	min-height: 100%
+	background: url('../images/index/22.jpg') 0 0 no-repeat 
+	background-size: cover 
+
+.cards
+
+	&__content
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		@media screen and (max-width: $md2)
+			flex-wrap: wrap
+	&__content-item
+		margin-right: 7px
+		margin: 0 0 35px
+		flex: 0 0 24.59%
+		text-align: center
+		position: relative
+		&:last-child
+			margin: 0
+			@media screen and (max-width: $md3)
+				margin: 0 0 35px 7px
+		@media screen and (max-width: $md2)
+			flex: 1 0 49%
+.container
+
+.content-item
+
+	&__img
+		padding: 0 0 17px
+.content-item-text
+	margin: 0 auto
+	max-width: 247px
+	color: #ffffff
+	font-size: 16px
+	font-weight: 500
+	line-height: 22px
+.content-item-price
+	position: absolute
+	left: 0
+	top: 220px
+	text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5)
+	color: #ffffff
+	font-size: 45px
+	font-weight: 700
+	line-height: 45px
+	span
+		font-size: 31px
+		line-height: 31px
+
+.content-item-hit
+	position: absolute
+	top: 0
+	left: 0
+
+/*Desk*/	
+
+.desk
+	display: flex
+	flex-direction: column
+	padding: 0 0 40px
+	&__title
+		padding: 30px 0 26px 20px
+		color: #323232
+		font-family: Roboto
+		font-size: 24px
+		font-weight: 500
+		line-height: 30px
+	&__cards
+		display: flex
+		flex-wrap: wrap
+	&__cards-item
+		padding: 0 5px 15px 76px
+		flex: 1 0 50%
+		min-width: 320px
+		position: relative
+		color: #323232
+		font-size: 16px
+		font-weight: 400
+		line-height: 22px
+		@media screen and (max-width: $md3)
+			flex: 1 0 50%
+		@media screen and (max-width: $md4)
+			min-width: auto
+			padding: 0 5px 15px 65px
+	&__cards-text
+
+	&__content
+		padding: 0 0 15px
+		background: url("../images/index/03bg.jpg") -20px 0 no-repeat
+		background-size: cover 
+		border-radius: 20px
+.cards-item-1
+	&:before 
+		content: ''
+		width: 49px
+		height: 49px
+		top: -7px
+		left: 20px
+		position: absolute
+		background: url('../images/icon/01.png') 0 0 no-repeat 
+		@media screen and (max-width: $md4)
+			left: 7px
+.cards-item-2
+	&:before 
+		content: ''
+		width: 49px
+		height: 49px
+		top: -7px
+		left: 20px
+		position: absolute
+		background: url('../images/icon/03.png') 0 0 no-repeat 
+		@media screen and (max-width: $md4)
+			left: 7px
+.cards-item-3
+	&:before 
+		content: ''
+		width: 49px
+		height: 49px
+		top: -7px
+		left: 20px
+		position: absolute
+		background: url('../images/icon/02.png') 0 0 no-repeat 
+		@media screen and (max-width: $md4)
+			left: 7px
+.cards-item-4
+	&:before 
+		content: ''
+		width: 49px
+		height: 49px
+		top: -7px
+		left: 20px
+		position: absolute
+		
+		background: url('../images/icon/04.png') 0 0 no-repeat 
+		@media screen and (max-width: $md4)
+			left: 7px
+/*News*/
+
+.news
+
+	&__content
+
+	&__cards
+
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: $md3)
+			flex-direction: column
+	&__item
+		padding: 27px 25px 0 20px
+		height: 220px
+		flex: 0 0 49.5%
+		@media screen and (max-width: $md4)
+			padding: 15px
+	&__item-1
+		margin: 0 0 35px
+		background: url("../images/index/01bg.png") 0 0 no-repeat
+		background-size: cover
+		border-radius: 20px
+		@media screen and (max-width: $md3)
+			flex: 1 1 auto
+	&__item-title
+		padding: 0 0 15px
+		color: #323232
+		font-size: 16px
+		line-height: 22px
+		font-weight: 500
+	&__item-link
+		max-width: 285px
+		color: #323232
+		font-size: 24px
+		line-height: 30px
+		font-weight: 600
+		text-decoration: underline
+		@media screen and (max-width: $md4)
+			font-size: 21px
+			line-height: 25px 
+	&__item-2
+		// flex: 0 0 49.5%
+		margin: 0 0 35px
+		background: url("../images/index/02bg.png") 0 0 no-repeat
+		background-size: cover
+		border-radius: 20px
+		@media screen and (max-width: $md3)
+			flex: 1 1 auto
+	&__item-text
+		max-width: 510px
+		margin-bottom: 34px
+		color: #5a5a5a
+		font-weight: 400
+		font-size: 16px
+		line-height: 22px
+		@media screen and (max-width: $md4)
+			font-size: 12px
+			line-height: 18px
+			margin-bottom: 15px
+	&__item-form
+		form 
+			padding: 0 0 40px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+			@media screen and (max-width: $md4)
+				flex-direction: column
+
+		input 
+			padding: 10px
+			margin-right: 10px
+			width: 100%
+			max-width: 368px
+			height: 44px
+			@media screen and (max-width: $md4)
+				margin-right: 0
+				margin-bottom: 10px
+
+/*Contacts*/
+
+
+.contacts
+	@media screen and (max-width: $md4)
+		padding: 370px 0 0 
+	&__body
+		position: relative
+		z-index: 100
+
+	&__body-content
+		padding: 35px 25px 30px
+		// width: 225px
+		position: absolute
+		text-align: center
+		top: 50px
+		right: 0
+		border-radius: 20px
+		background-color: #fffefc
+		@media screen and (max-width: $md4)
+			top: -361px
+			width: 100%
+		p 
+			&:nth-child(4)
+				padding: 0 0 10px
+			&:nth-child(5)
+				padding: 0 0 20px
+
+.map
+	height: 430px
+	@media screen and (max-width: $md4)
+		display: none
+		
+.body-content
+	&__text
+		padding: 0 0 10px
+		color: #323232
+		font-family: Roboto
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
+	&__subtext
+		padding: 0 0 20px
+		width: 222px
+		color: #323232
+		font-family: Roboto
+		font-size: 18px
+		font-weight: 700
+		line-height: 24px
+		&:last-of-type
+			padding: 0 0 10px
+		@media screen and (max-width: $md4)
+			width: 100%
