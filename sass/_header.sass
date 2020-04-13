@@ -17,11 +17,12 @@
 		flex-direction: column 
 		padding: 0 15px
 		@media screen and (max-width: $md3)
-			flex-direction: column
-			justify-content: space-between
-			margin: 10px 0 auto
-		&-index 
 			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+			margin: 0
+		&-index 
+
 	&__logo
 		margin: 0 24px 0 0
 		cursor: pointer
@@ -183,7 +184,7 @@
 	@media screen and (max-width: $md3)
 		display: block
 		position: absolute
-		top: 40px
+		top: 32px
 		left: 15px
 		width: 30px
 		height: 18px
@@ -201,9 +202,9 @@
 			&:last-child
 				top: auto
 				bottom: 0
-		@media screen and (max-width: $md4)
-			top: 38px
+
 		&.active
+			background-color: transparent 
 			span
 				background-color: #fff
 				transform: scale(0)
@@ -304,13 +305,13 @@
 		justify-content: center
 		align-items: center
 		border-radius: 50%
-		width: 50px
-		height: 50px
+		width: 35px 
+		height: 35px 
 
 .bottom__hidden-catalog
 	position: absolute
-	top: -91px 
-	left: -51px
+	top: -21px
+	right: 0
 /* bread-crumbs*/
 .header__bottom-content
 	display: flex
@@ -320,7 +321,7 @@
 
 
 .bread
-	margin: 0 0 0 -12px
+	margin: -16px 0 0 
 	&__crumbs-list
 		display: flex
 		@media screen and (max-width: $md3)
@@ -337,7 +338,8 @@
 		font-size: 14px
 		font-weight: 400
 		line-height: 16px
-
+	@media screen and (max-width: $md3)
+		padding: 100px 0 0
 .bread__crumbs-1
 	padding-left: 0
 .bread__crumbs-3
